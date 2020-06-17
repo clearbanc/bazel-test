@@ -1,6 +1,9 @@
 workspace(
     name = "bazel_test",
-    managed_directories = {"@npm": ["node_modules"]},
+    managed_directories = {
+        "@npm": ["node_modules"],
+        "@npm_app": ["app/node_modules"],
+    },
 )
 
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
@@ -22,10 +25,17 @@ node_repositories(
     # package_json = ["//:package.json"],
 )
 
+# Install deps for each app
 npm_install(
     name = "npm",
     package_json = "//:package.json",
     package_lock_json = "//:package-lock.json",
+)
+
+npm_install(
+    name = "npm_app",
+    package_json = "//app:package.json",
+    package_lock_json = "//app:package-lock.json",
 )
 
 # Install all Bazel dependencies needed for npm packages that supply Bazel rules

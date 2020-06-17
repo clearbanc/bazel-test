@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "bazel build //..."
+    "build": "bazel build //...",
+    "start": "bazel run //app:run"
   },
   "author": "",
   "license": "ISC",
