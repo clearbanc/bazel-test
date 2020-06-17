@@ -16,6 +16,7 @@ ts_library(
     node_modules = "@npm_app//typescript:typescript__typings",
     deps = [
         "@npm_app//:node_modules",
+        "//packages/logger"
     ]
 )
 

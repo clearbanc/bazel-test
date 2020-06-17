@@ -3,6 +3,7 @@ workspace(
     managed_directories = {
         "@npm": ["node_modules"],
         "@npm_app": ["app/node_modules"],
+        "@npm_logger": ["packages/logger/node_modules"],
     },
 )
 
@@ -36,6 +37,12 @@ npm_install(
     name = "npm_app",
     package_json = "//app:package.json",
     package_lock_json = "//app:package-lock.json",
+)
+
+npm_install(
+    name = "npm_logger",
+    package_json = "//packages/logger:package.json",
+    package_lock_json = "//packages/logger:package-lock.json",
 )
 
 # Install all Bazel dependencies needed for npm packages that supply Bazel rules

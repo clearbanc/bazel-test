@@ -1,6 +1,6 @@
 import { get } from 'lodash';
 
-import { logger } from './utils';
+import { log } from '../../packages/logger';
 
 // FIXME: JSON imports currently do not work.
 // const foo = require('./foo.json');
@@ -8,4 +8,4 @@ const foo = {
   bar: 'baz',
 };
 
-logger(get(foo, 'bar'));
+log(get(foo, 'bar'));
