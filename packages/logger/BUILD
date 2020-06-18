@@ -4,9 +4,9 @@ load("@npm_bazel_typescript//:index.bzl", "ts_library")
 
 ts_library(
     name = "logger",
+    module_name = "@clearbanc/logger",
     srcs = glob(["*.ts"]),
-    node_modules = "@npm_app//typescript:typescript__typings",
     deps = [
-        "@npm_app//:node_modules",
+        "@npm//@types",
     ]
 )

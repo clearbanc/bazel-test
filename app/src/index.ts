@@ -1,6 +1,6 @@
 import { get } from 'lodash';
 
-import { log } from '../../packages/logger';
+import { log } from '@clearbanc/logger';
 
 // FIXME: JSON imports currently do not work.
 // const foo = require('./foo.json');

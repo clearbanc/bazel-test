@@ -13,9 +13,9 @@ load("@npm_bazel_typescript//:index.bzl", "ts_library")
 ts_library(
     name = "app",
     srcs = glob(["src/**/*.ts"]),
-    node_modules = "@npm_app//typescript:typescript__typings",
     deps = [
-        "@npm_app//:node_modules",
+        "@npm//@types",
+        "@npm//lodash",
         "//packages/logger"
     ]
 )
