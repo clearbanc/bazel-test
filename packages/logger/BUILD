@@ -1,4 +1,4 @@
-package(default_visibility = ["//visibility:public"])
+package(default_visibility = ["//:__subpackages__"])
 
 load("@npm_bazel_typescript//:index.bzl", "ts_library")
 

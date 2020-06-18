@@ -1,4 +1,4 @@
-package(default_visibility = ["//visibility:public"])
+package(default_visibility = ["//visibility:private"])
 
 load("@build_bazel_rules_nodejs//:index.bzl", "nodejs_binary")
 load("@npm_bazel_typescript//:index.bzl", "ts_library")
