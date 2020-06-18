@@ -6,6 +6,7 @@
     "module": "esnext",
     "moduleResolution": "node",
     "paths": {
+      "bazel_test/*": ["*"],
       "@clearbanc/*": ["packages/*"]
     },
     "strict": true

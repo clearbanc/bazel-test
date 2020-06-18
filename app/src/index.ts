@@ -1,11 +1,6 @@
 import { get } from 'lodash';
 
 import { log } from '@clearbanc/logger';
-
-// FIXME: JSON imports currently do not work.
-// const foo = require('./foo.json');
-const foo = {
-  bar: 'baz',
-};
+const foo = require('bazel_test/app/data/foo.json');
 
 log(get(foo, 'bar'));
