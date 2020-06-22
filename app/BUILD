@@ -6,9 +6,7 @@ load("@npm_bazel_typescript//:index.bzl", "ts_library")
 ts_library(
     name = "app",
     srcs = glob(["src/**/*.ts"]),
-    data = [
-        "//app/data:foo.json"
-    ],
+    data = glob(["src/**/*.js", "data/**/*.json"]),
     deps = [
         "@npm//@types",
         "@npm//lodash",
