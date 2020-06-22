@@ -10,6 +10,7 @@ ts_library(
     deps = [
         "@npm//@types",
         "@npm//lodash",
+        "@npm//koa",
         "//packages/logger"
     ]
 )
